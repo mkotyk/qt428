@@ -12,7 +12,7 @@ refering to the zmodopipe code.  Many of the structures and fields are unknown
 or guesses.
 
 The only video player I found that could reliably play the H.264 video stream
-was mplayer.
+was mplayer and ffplay.
 
 To view multiple channels, simply start multiple instance of the program with
 different channel arguments.
@@ -23,6 +23,15 @@ Compiling
 I've included a simple Makefile.  The code is standard C++ and does not use
 any unusual libraries.  I've only tried it in Linux, but it should be
 relatively easy to port to other platforms.
+
+Running
+-------
+Example:
+
+`qt428 -c 2 192.168.1.2 | ffplay -`
+
+You can run multiple instances for multiple video channels.  Password and username
+can be specified with -p and -u respectively.
 
 License
 -------
